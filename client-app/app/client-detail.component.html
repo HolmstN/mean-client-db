@@ -1,0 +1,20 @@
+<div *ngIf="client">
+    <h2>{{ client.name }} Details</h2>
+    <div><label>id:</label>{{ client.id }}</div>
+    <div>
+        <label>name:</label>
+        <input [(ngModel)]="client.name" placeholder="name"/>
+    </div>
+    <div>
+        <label>clientCode:</label>
+        <input [(ngModel)]="client.clientCode" placeholder="Client Code"/>
+    </div>
+    <div>
+        <label>financial:</label>
+        <input [(ngModel)]="client.financial" placeholder="true or false"/>
+    </div>
+        <div>
+        <label>clinical:</label>
+        <input [(ngModel)]="client.clinical" placeholder="true or false"/>
+    </div>
+</div>

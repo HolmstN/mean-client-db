@@ -1,0 +1,16 @@
+<h2>TEST ME!!!</h2>
+
+<p class="test">{{ clients }}</p>
+
+<ul class="clients">
+    <li *ngFor="let client of clients"
+        [class.selected]="client === selectedClient"
+        (click)="onSelect(client)">
+        {{ client.name }} || {{ client.clientCode }}
+    </li>
+</ul>
+
+<div *ngIf='selectedClient'>
+    <h2>{{ selectedClient.name | uppercase }} Mini-Detail</h2>
+    <button (click)="gotoDetail()">View Details</button>
+</div>
